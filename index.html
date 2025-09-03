@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+
+    <header>
+        <h1>Interactive Web Page</h1>
+        <p>JavaScript Event Handling, Interactive Elements & Form Validation</p>
+    </header>
+
+    <div class="container">
+        <section class="event-section">
+            <h2><i class="fas fa-mouse"></i> Event Handling</h2>
+            <div class="event-buttons">
+                <button id="clickButton"><i class="fas fa-hand-pointer"></i> Click Me!</button>
+                <button id="mouseoverButton"><i class="fas fa-hand-point-up"></i> Mouse Over Me!</button>
+                <button id="keyEventButton"><i class="fas fa-keyboard"></i> Press Any Key!</button>
+            </div>
+            <div class="event-log" id="eventOutput">
+                <div class="event-item">Events will be shown here...</div>
+            </div>
+        </section>
+
+        <section class="counter-section">
+            <h2><i class="fas fa-gamepad"></i> Counter Game</h2>
+            <div class="counter-display" id="counterValue">0</div>
+            <div class="counter-buttons">
+                <button id="incrementBtn"><i class="fas fa-plus"></i> Increment</button>
+                <button id="decrementBtn"><i class="fas fa-minus"></i> Decrement</button>
+                <button id="resetBtn"><i class="fas fa-redo"></i> Reset</button>
+            </div>
+        </section>
+
+        <section class="interactive-elements">
+            <div class="faq-section">
+                <h2><i class="fas fa-question-circle"></i> FAQ Section</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">What is JavaScript? <span>+</span></div>
+                        <div class="faq-answer">JavaScript is a programming language that enables interactive web pages. It is an essential part of web applications.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What are JavaScript events? <span>+</span></div>
+                        <div class="faq-answer">Events are actions that happen in the browser, such as clicks, mouse movements, or keyboard input. JavaScript can respond to these events.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What is DOM manipulation? <span>+</span></div>
+                        <div class="faq-answer">DOM manipulation is the process of interacting with the Document Object Model (DOM) of a web page to change its structure, style, or content.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-section">
+                <h2><i class="fas fa-folder"></i> Tabbed Interface</h2>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="tab1">
+                            <h3>First Tab Content</h3>
+                            <p>This is the content for the first tab. JavaScript makes tabs interactive without page reload.</p>
+                        </div>
+                        <div class="tab-panel" id="tab2">
+                            <h3>Second Tab Content</h3>
+                            <p>This is the content for the second tab. You can put any content you like in tabs.</p>
+                        </div>
+                        <div class="tab-panel" id="tab3">
+                            <h3>Third Tab Content</h3>
+                            <p>This is the content for the third tab. Tabs are great for organizing content in a small space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2><i class="fas fa-check-circle"></i> Form Validation</h2>
+            <form id="validationForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <div class="error" id="nameError">Please enter a valid name (min 8 characters)</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <div class="error" id="emailError">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <div class="password-strength" id="passwordStrength"></div>
+                    <div class="error" id="passwordError">Password must be at least 8 characters with uppercase, lowercase, and number</div>
+                </div>
+                
+                <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+            </form>
+            <div class="success-message" id="successMessage">
+                Form submitted successfully!
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
